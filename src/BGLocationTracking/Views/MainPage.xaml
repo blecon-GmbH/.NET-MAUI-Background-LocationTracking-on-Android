@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:blecon.BGLocationTracking.ViewModels"
+             x:Class="blecon.BGLocationTracking.Views.MainPage"
+             x:DataType="viewModels:MainPageViewModel">
+    <Grid RowDefinitions="*, Auto">
+        <CollectionView Grid.Row="0"
+                        ItemsSource="{Binding LocationChanges}"
+                        SelectionMode="None" />
+
+        <Button Grid.Row="1"
+                Text="{Binding StartStopButtonText}"
+                Command="{Binding StartStopCommand}" />
+    </Grid>
+</ContentPage>
